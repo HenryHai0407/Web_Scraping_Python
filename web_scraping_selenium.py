@@ -20,7 +20,7 @@ product_titles = [product.get_attribute('title') for product in products]
 
 csv_file = 'product_titles.csv'
 
-# Write data to CSV file
+# Write data to CSV files
 with open(csv_file, mode='w', newline= '', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(['Product Titles'])
