@@ -15,7 +15,7 @@ time.sleep(3)
 
 products = driver.find_elements(By.CSS_SELECTOR, "h3 a")
 
-# Prepare data to save
+# Prepare data to save to targeted file
 product_titles = [product.get_attribute('title') for product in products]
 
 csv_file = 'product_titles.csv'
