@@ -7,7 +7,7 @@ import csv
 # Initialize WebDriver (Make sure to specify the correct path to your ChromeDriver)
 driver = webdriver.Chrome() 
 
-#Open a website
+#Open a website from your choice
 driver.get("https://books.toscrape.com/catalogue/page-2.html")
 
 # Wait for JavaScript to load (optional)
