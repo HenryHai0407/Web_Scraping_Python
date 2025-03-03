@@ -11,7 +11,7 @@ driver = webdriver.Chrome()
 driver.get("https://books.toscrape.com/catalogue/page-2.html")
 
 # Wait for JavaScript to load (optional)
-time.sleep(3)
+time.sleep(4)
 
 products = driver.find_elements(By.CSS_SELECTOR, "h3 a")
 
