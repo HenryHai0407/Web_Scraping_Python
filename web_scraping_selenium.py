@@ -23,7 +23,7 @@ csv_file = 'product_titles.csv'
 # Write data to CSV files
 with open(csv_file, mode='w', newline= '', encoding='utf-8') as file:
     writer = csv.writer(file)
-    writer.writerow(['Product Titles'])
+    writer.writerow(['The title of products'])
     for title in product_titles:
         writer.writerow([title])
 
