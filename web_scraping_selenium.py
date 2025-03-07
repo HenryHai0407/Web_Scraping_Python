@@ -4,6 +4,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 import csv
 
+name = "Hoang Hai"
+
 # Initialize WebDriver (Make sure to specify the correct path to your ChromeDriver)
 driver = webdriver.Chrome() 
 
