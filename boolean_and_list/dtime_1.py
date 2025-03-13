@@ -24,3 +24,8 @@ print(now)
 tz_new_york = pytz.timezone("Asia/Saigon")
 datetime_newyork = datetime.now(tz_new_york)
 print(datetime_newyork)
+
+# Timezone Helsinki
+tz_helsinki = pytz.timezone("Europe/Helsinki")
+datetime_helsinki = datetime.now(tz_helsinki)
+print(datetime_helsinki)
