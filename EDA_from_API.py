@@ -69,3 +69,16 @@ df.rename(columns={
 
 #5 Drop rows that are missing critical data
 df.dropna(subset=["record_id","full_name","score"], inplace=True)  
+
+#6 Print DataFrame to check the updates
+print(f" Transformed Data: {df.head()}")
+
+### Step 3: Load Data into Database
+connection_string = "postgresql://username:password@localhost:5432/mydatabase"
+engine = create_engine(connection_string)
+
+# Write the DataFrame to the database table "cleaned_data"
+# if_exists="replace" drops the existing table, or you can use "append" to add new records.
+df.to_sql("cleaned_data", engine, if_exists="replace", index=False)
+
+print("Data loaded successfully into the data warehouse.")
