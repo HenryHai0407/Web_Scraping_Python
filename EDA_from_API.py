@@ -82,3 +82,7 @@ engine = create_engine(connection_string)
 df.to_sql("cleaned_data", engine, if_exists="replace", index=False)
 
 print("Data loaded successfully into the data warehouse.")
+
+
+# Explanation for params in getting_API():
+# Using params when we need: filtering API data, paginating results, sorting results, and providing authentication tokens
