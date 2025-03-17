@@ -4,10 +4,7 @@ class Student:
         self.name = name # instance Attribute
         self.age = age
     def introduce1(self):
-        print(f"Name: {self.name}, Age: {self.age}")
-    
-
-
+        print(f"Name: {self.name}, Age: {self.age}")    
 
 if __name__ == "__main__":
     student1 = Student("Tuan",12)
