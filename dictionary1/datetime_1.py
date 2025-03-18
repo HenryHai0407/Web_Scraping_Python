@@ -17,8 +17,11 @@ from datetime import datetime, date
 #         bd_count += 1
 # print(f" The number of students having the birthday in the next month is {bd_count}")
 
-#2
-t1 = datetime(2018,7,12,12,10,00)
-t2 = datetime(2015,12,23,10,11,9)
-t3 = t1 - t2
-print(t3)
+# #2
+# t1 = datetime(2018,7,12,12,10,00)
+# t2 = datetime(2015,12,23,10,11,9)
+# t3 = t1 - t2
+# print(t3)
+
+#3
+bd = input("Enter your birthday: ")
