@@ -1,4 +1,4 @@
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 
 
 # #1: Inform the number of students has its birthday in the next month
@@ -55,13 +55,13 @@ Le Lan,09022001,Ha Noi,M,8,A2,Mark
 Le Long,01092002,Ha Noi,M,10,A2,Alice
 Pham The Hien,10121999,Ho Chi Minh,F,5,A3,Alice
 """
-
-stu_list = []
-str1 = str.strip().split("\n")
-for index,item in enumerate(str1):
-    if index > 0:
-        stu_list.append(item)
-print(stu_list)
+def convert_str_to_list(str):
+    stu_list = []
+    str1 = str.strip().split("\n")
+    for index,item in enumerate(str1):
+        if index > 0:
+            stu_list.append(item)
+    print(stu_list)
 
 def highest_number_of_students(stu_list):
     class1 = {}
@@ -140,4 +140,30 @@ def surname_highest_score(stu_list):
     m1 = max(surname2, key = surname2.get)
     print(f"Surname has the highest average score is {m1} with {surname2[m1]} scores")
 
-surname_highest_score(stu_list)
+def check_their_early_marriage():
+# 4th exercise: Whether her husband is guilty or not
+    girl_str = input("Enter the birthday of girl (ddmmYYYY): ")
+    today = date.today()
+    girl_bd = datetime.strptime(girl_str,"%d%m%Y").date()
+    print(today)
+    print(girl_bd)
+    age = today.year - girl_bd.year
+    if (today.month, today.day) < (girl_bd.month,girl_bd.day):
+        age -= 1
+        if age < 18:
+            print(f"They are early marriage because her age is {age}")
+            full_age = today - girl_bd
+            baby = timedelta(weeks=36,days=10)
+            birth_date = today - baby
+            print(f" Baby was born on: {birth_date}")
+            age_at_birth = birth_date.year - girl_bd.year
+            if (birth_date.month, birth_date.day) < (girl_bd.month, girl_bd.day):
+                age_at_birth -= 1
+            if age_at_birth < 16:
+                print(f"Her husband is *guilty* because she gave birth before turning 16!")
+            else:
+                print(f"Her husband is not guilty!")
+        else:
+            print(f"They are NOT early marriage because her age is {age}")
+
+check_their_early_marriage()
