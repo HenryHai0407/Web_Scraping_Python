@@ -43,7 +43,7 @@ from datetime import datetime, date
 #4
 str="""
 name,age,address,gender,mark,class,teacher
-Le Hoang,22012000,Ha Noi,M,10,A2,Alice
+Le Hoang,22012000,Ha Noi,M,9,A2,Alice
 Nguyen Ngoc Quynh,21022001,Ho Chi Minh,F,6,A1,Alice
 Tran Minh Tuan,21031998,Ha Noi,M,9,A3,Alice
 Nguyen Bao Hoang,12022000,Ho Chi Minh,M,8,A1,Mark
@@ -51,14 +51,13 @@ Le Van Do,19032002,Ha Noi,M,9,A6,Alice
 Do Tan,20082000,Ha Noi,M,7,A7,Mark&Alice
 Tran Le Nguyen Anh,12112000,Ho Chi Minh,F,9,A3,Ben
 Le Ngoc,02121999,Ha Noi,M,10,A2,Alice
-Le Lan,09022001,Ha Noi,M,10,A2,Mark
+Le Lan,09022001,Ha Noi,M,8,A2,Mark
 Le Long,01092002,Ha Noi,M,10,A2,Alice
 Pham The Hien,10121999,Ho Chi Minh,F,5,A3,Alice
 """
 
 stu_list = []
 str1 = str.strip().split("\n")
-print(str1)
 for index,item in enumerate(str1):
     if index > 0:
         stu_list.append(item)
@@ -93,4 +92,52 @@ def most_active_teacher(stu_list):
     print(f"Teacher who teach most classes is {m} with {teacher1[m]} classes")
 
 
+def avg_score_most_student(stu_list):
+    class1 = {}
+    for student in stu_list:
+        student1 = student.split(",")
+        classroom = student1[5]
+        if classroom in class1.keys():
+            class1[classroom] += 1
+        else:
+            class1[classroom] = 1
+    print(class1)
+    m = max(class1, key = class1.get)
+    print(f"Class has the most student is {m} with {class1[m]} students")
 
+    avg = []
+    for student in stu_list:
+        student2 = student.split(",")
+        score = student2[4]
+        if student2[5] == m:
+            avg.append(score)
+        else:
+            pass
+    print(avg)
+    avg1 = []
+    for num in avg:
+        if num.isnumeric():
+            avg1.append(int(num))
+    print(f"The avg score of class having the most number of students is {sum(avg1)/len(avg1)}")
+
+#8: Surname has the highest avg score
+def surname_highest_score(stu_list):
+    surname1 = {}
+    for student in stu_list:
+        student1 = student.split(",")
+        surname = student1[0][:student1[0].find(" ")]
+        if surname in surname1.keys():
+            surname1[surname].append(int(student1[4]))
+        else:
+            surname1[surname] = [int(student1[4])]
+    print(surname1)
+
+    surname2 = {}
+    for k,v in surname1.items():
+        surname2[k] = sum(v)/len(v)
+    print(surname2)
+
+    m1 = max(surname2, key = surname2.get)
+    print(f"Surname has the highest average score is {m1} with {surname2[m1]} scores")
+
+surname_highest_score(stu_list)
