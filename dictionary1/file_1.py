@@ -16,4 +16,17 @@
 # except Exception as e:
 #     print(f"An error occurred: {e}")
 
----
+# ------
+file_name = "dictionary1\\numbers.txt"
+
+with open(file_name) as f:
+    reading_f1 = f.readlines()
+    print(reading_f1)
+
+number_list = []
+
+for line in reading_f1:
+    line1 = line.strip().split(",")
+    for number in line1:
+        number_list.append(number)
+print(number_list)
