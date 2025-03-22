@@ -1,0 +1,21 @@
+StudentID,Surname,FirstName,DateOfBirth,Score,Class,Address
+S001,Bennett,Kevin,30-07-2006,58.76,C,4307 John Flats New Erica
+S002,Doyle,Patrick,29-06-2002,90.55,D,PSC 2753 Ellisburgh
+S003,Jones,Stephen,06-05-2002,89.76,E,223 Holland Grove Apt. 318 Cassandratown
+S004,Mathews,Caroline,04-11-2006,58.71,E,4927 Jennifer Mews North Amanda
+S005,Phillips,Heather,04-04-2000,74.2,C,97564 Rogers Field Suite 493 North Brianshire
+S006,Mcdaniel,Ricky,15-11-1999,92.51,B,56570 Jeffrey Wells Suite 637 Lake Wendy
+S007,Duncan,Xavier,25-08-2002,96.73,A,66305 Campbell Plains Suite 749 Laurenchester
+S008,Jones,Susan,02-01-2006,58.15,D,9856 Carr Rapids Suite 542 Littleville
+S009,Rodriguez,Julie,19-07-2005,94.41,B,27368 Anthony Keys Charlesstad
+S010,Jordan,Melissa,23-11-2005,84.54,C,98975 Thompson Hollow Apt. 590 Perezmouth
+S011,Kennedy,Lisa,02-03-2006,96.8,B,294 Jonathan Locks Suite 739 South Austin
+S012,Shields,Stephen,20-07-2005,78.41,D,811 George Island Apt. 638 New Teresaborough
+S013,Miller,Justin,26-11-2003,78.41,A,456 Carr Track Suite 517 Loriton
+S014,Mitchell,Loretta,18-04-2002,95.08,B,17212 Shaw Springs Forbesbury
+S015,Mccoy,Jeffrey,02-11-2006,84.57,E,USCGC Rojas Ortizmouth
+S016,Osborn,Kevin,09-12-2004,76.28,B,862 Cooper Road Shawfurt
+S017,Graham,Lisa,03-05-2003,62.02,D,3760 Johnson Greens Garyport
+S018,Smith,Jared,29-01-2000,70.46,C,31420 Oconnor Mews New Paulview
+S019,Porter,Lori,20-02-2006,76.9,C,07569 Perez Dam Port Chad
+S020,Anderson,Christopher,02-09-2000,72.1,A,38094 Matthew Spur Millerview

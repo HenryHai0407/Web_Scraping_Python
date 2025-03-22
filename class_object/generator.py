@@ -1,7 +1,7 @@
 import random
 from faker import Faker
 
-# Initialize Faker to generate random names and addresses
+# Initialize Faker
 fake = Faker()
 
 # Define possible class names
@@ -17,8 +17,13 @@ for i in range(1, 21):  # 1 to 20
     dob = fake.date_of_birth(minimum_age=18, maximum_age=25).strftime("%d-%m-%Y")
     score = round(random.uniform(50, 100), 2)  # Random score between 50-100
     student_class = random.choice(class_names)
-    address = fake.address().replace("\n", ", ")  # Ensure single-line address
-    
+
+    # Generate a properly formatted address: "Street Number Street Name City"
+    address_parts = fake.address().split("\n")[0].split(",")  # Get only street address
+    street = address_parts[0]  # Street number + name
+    city = fake.city()
+    address = f"{street} {city}"  # Final formatted address
+
     students.append(f"{student_id},{surname},{first_name},{dob},{score},{student_class},{address}")
 
 # Write to student.txt
