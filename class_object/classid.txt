@@ -1,0 +1,6 @@
+Class,ClassType,Teacher
+A,Biology,Alex
+B,Chemistry,Hormione
+C,Math,Potter
+D,Literature,Harry
+E,Physics,James

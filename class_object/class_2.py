@@ -42,19 +42,38 @@ with open("class_object\student1.txt","r") as f:
 #     print(student.__dict__)
 # -> Turn the object into a dictionary
 
-top_student = max(students, key = lambda stu: stu.score)
-print(f"The student with the highest score is:\n{top_student}")
+# top_student = max(students, key = lambda stu: stu.score)
+# print(f"The student with the highest score is:\n{top_student}")
 
-# ---------------------
-# Find the students with a score above 90
-high_scorers = [student for student in students if student.score > 90]
+# # ---------------------
+# # Find the students with a score above 90
+# high_scorers = [student for student in students if student.score > 90]
 
-for s  in high_scorers:
-    print(f"{s.student_id}: {s.first_name} {s.surname} - Score: {s.score}")
-print(f"-----------------------------------------")
-# -----------------------
-# Sort students by score (Descending Order)
-sr_students = sorted(students, key = lambda s: s.score, reverse=True)
-print(f"Descending order")
-for s in sr_students:   
-    print(f"{s.student_id}: {s.first_name} {s.surname} - Score: {s.score}")
+# for s  in high_scorers:
+#     print(f"{s.student_id}: {s.first_name} {s.surname} - Score: {s.score}")
+# print(f"-----------------------------------------")
+# # -----------------------
+# # Sort students by score (Descending Order)
+# sr_students = sorted(students, key = lambda s: s.score, reverse=True)
+# print(f"Descending order")
+# for s in sr_students:   
+#     print(f"{s.student_id}: {s.first_name} {s.surname} - Score: {s.score}")
+
+class Teacher:
+    def __init__(self,class_name,class_type,teacher):
+        self.class_name = class_name
+        self.class_type = class_type
+        self.teacher = teacher
+    
+    def __str__(self):
+        return f"Teacher {self.teacher} in charges of {self.class_name} - {self.class_type}"
+
+teachers = []
+with open("class_object\classid.txt","r") as f1:
+    next(f1)
+    for line1 in f1:
+        data = line1.strip().split(",")
+        teacher = Teacher(*data)
+        teachers.append(teacher)
+
+
