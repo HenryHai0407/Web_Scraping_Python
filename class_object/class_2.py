@@ -8,10 +8,8 @@ class People:
     def introduce(self,country):
         print(f"Hi, my name is {self.name}, {self.age} years old. I am from {country}")
         # country variables above is located IN def introduce(self,country)
-student1 = People("Lan",20)
-
-student1.introduce("Australia")
-
+# student1 = People("Lan",20)
+# student1.introduce("Vietnam")
 
 # -----------
 
@@ -76,4 +74,84 @@ with open("class_object\classid.txt","r") as f1:
         teacher = Teacher(*data)
         teachers.append(teacher)
 
+## ------------------------------------------------------------
+# Step 1: Calculate the average score for each class
+from collections import defaultdict
+class_scores = defaultdict(list)
+
+for student in students:
+    class_scores[student.class_name].append(student.score)
+
+class_avg_scores = {class_name: sum(scores)/len(scores) for class_name, scores in class_scores.items()}
+
+# Step 2: Map class scores to teachers
+teacher_scores = []
+for teacher in teachers:
+    if teacher.class_name in class_avg_scores:
+        avg_score = class_avg_scores[teacher.class_name]
+        teacher_scores.append((teacher.teacher, teacher.class_name, avg_score))
+
+# Step 3: Sort by highest average score and get top 3 teacher
+top_teachers = sorted(teacher_scores,key =lambda x: x[2],reverse=True)[:3]
+# Step 4: Print results
+print("\nTop 3 Teachers with Highest Average Student Score:")
+for rank, (teacher_name, class_name, avg_score) in enumerate(top_teachers, 1):
+    print(f"{rank}. {teacher_name} (Class: {class_name}) - Avg Score: {avg_score:.2f}")
+
+## =========
+# Task 3:
+teachers_info = []
+class Teacher_Info:
+    def __init__(self,teacher,teacher_surname,teacher_firstname,teacher_dateofbirth,teacher_address):
+        self.teacher = teacher
+        self.teacher_surname = teacher_surname
+        self.teacher_firstname = teacher_firstname
+        self.teacher_dateofbirth = teacher_dateofbirth
+        self.teacher_address = teacher_address
+    
+    def __str__(self):
+        return f"{self.teacher} has a full name of {self.teacher_firstname} {self.teacher_surname}, birthing in {self.teacher_dateofbirth} and living in {self.teacher_address}"
+
+with open("class_object\\teacherid.txt","r") as f3:
+    next(f3)
+    for line2 in f3:
+        data = line2.strip().split(",")
+        t_i = Teacher_Info(*data)
+        teachers_info.append(t_i)  
+
+# Count the number of students in each class
+class_dict = {}
+for student in students:
+    if student.class_name in class_dict.keys():
+        class_dict[student.class_name] += 1
+    else:
+        class_dict[student.class_name] = 1
+
+teacher_class = []
+for teacher in teachers:
+    if teacher.class_name in class_dict.keys():
+        teacher_class.append((teacher.teacher, teacher.class_name,class_dict[teacher.class_name]))
+
+print(teacher_class)
+# Teacher with its number of students
+task2 = {}
+for t in teacher_class:
+    if t[0] in task2:
+        task2[t[0]] += t[2]
+    else:
+        task2[t[0]] = t[2]
+print(task2)
+
+# Teacher with its number of class and that teacher doesn't teach more than 3 classes
+task3 = {}
+for t in teacher_class:
+    if t[0] in task3:
+        task3[t[0]] += 1
+    else:
+        task3[t[0]] = 1
+print(task3)
+
+for k,v in task3.items():
+    if v < 3:
+        print(f"Teacher {k} has {task2[k]} students")
 

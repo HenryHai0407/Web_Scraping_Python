@@ -1,6 +1,6 @@
 Class,ClassType,Teacher
 A,Biology,Alex
-B,Chemistry,Hormione
+B,Chemistry,Alex
 C,Math,Potter
 D,Literature,Harry
 E,Physics,James
