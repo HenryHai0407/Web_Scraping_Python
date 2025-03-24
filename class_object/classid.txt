@@ -4,3 +4,4 @@ B,Chemistry,Alex
 C,Math,Potter
 D,Literature,Harry
 E,Physics,James
+F,Technology,Lee
