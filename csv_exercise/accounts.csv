@@ -1,0 +1,81 @@
+id,fullname,dateofbirth,gender,address,score
+1,Matthew Huffman,2005-06-13,Male,"16471 Taylor Parks
+Donaldsonberg CT 65492",49.8
+2,James Stephens,1978-05-01,Male,"2630 Mary Run Apt. 310
+Peckbury LA 98330",3.2
+3,Veronica Carroll,1979-01-21,Other,"69362 Carlson Harbors Suite 985
+Lake Joseland MH 18567",6.9
+4,Carlos Coleman,1997-03-23,Male,"668 Bush Oval Apt. 239
+North Tonyberg FM 01535",57.5
+5,Jordan Lee,1981-10-07,Male,"22682 Cunningham Ridges
+Joshuafurt TN 64554",16.4
+6,Leslie Beard,1996-07-07,Other,"820 Matthew Ports Apt. 409
+East Traciville SC 48390",10.9
+7,Tiffany Reese,1970-12-25,Other,"860 Alexander Isle
+South Jacob WV 99450",91.6
+8,Jodi Powell,1973-01-24,Female,"583 Snyder Land Apt. 293
+Port Jeffreychester ND 30885",98.4
+9,Tammy Rios,2006-07-23,Female,"5318 Shawn Canyon Suite 065
+South Brady PA 04746",59.9
+10,Raymond Byrd,1974-08-10,Male,"776 Duran Stream
+Hallmouth TN 23525",33.9
+11,Courtney Flynn,2002-10-07,Female,"86400 Jennifer Isle
+Johnsonberg WV 30697",3.0
+12,Joshua Armstrong,2004-04-19,Male,"0998 Monroe Glens Apt. 837
+West Andrew WV 21851",82.5
+13,Margaret Brewer,1997-12-29,Female,"Unit 9127 Box 9838
+DPO AA 00702",66.6
+14,Brandy Lewis,1987-04-17,Female,"360 Amber Hill Suite 639
+West Lori ME 07356",80.6
+15,Megan Walker,1984-02-15,Female,"05591 Robert Dam
+Nelsonfort NM 88845",92.1
+16,Joseph Hoffman,1990-04-11,Male,"01704 Sellers Valleys
+Davidport OH 35567",8.6
+17,Elizabeth Blanchard,1975-02-13,Female,"6769 Lewis Shoal
+Josephview AS 22795",79.1
+18,Dana Richard,1972-12-08,Female,"51675 Castillo Crest Suite 952
+Port Rebeccastad FL 76836",63.0
+19,Robert Ryan,1972-04-22,Other,"321 Chandler Stravenue
+East Krista AL 36482",36.3
+20,Karen Fleming,2006-06-23,Female,"872 Knox Underpass Apt. 034
+Robertborough RI 11618",96.9
+21,Carolyn Rodriguez,1978-08-14,Female,"039 Orr Trafficway Suite 853
+New Leslieborough MA 13672",1.1
+22,Tina Torres,1991-06-26,Female,"85915 Cooke Burg
+Flynnton AK 95942",71.5
+23,Bryan Ramsey,1969-04-13,Other,"2931 Gomez Mall Apt. 714
+South Debraborough MT 42711",57.7
+24,Robert Bates,1985-09-26,Other,"4566 Ryan Rapids Apt. 476
+Reynoldsview ID 50561",5.0
+25,Karen Rivera,1968-02-07,Female,"6884 Petty Knolls
+Judithland TX 33943",51.0
+26,Christine Rogers,1970-07-02,Female,"243 Rios Corners
+Kleinhaven PW 99947",41.5
+27,Brian Smith,1982-12-31,Male,"02116 Gonzalez Loop Apt. 750
+Brownfort SC 04535",55.8
+28,Bruce Taylor,1988-12-01,Male,"662 Ayers Corners
+Ginatown NJ 09992",9.4
+29,Kenneth Nguyen,2003-11-30,Other,"47570 Bowen Brook
+Quinnfurt GA 08443",12.5
+30,Kristen Hernandez,1979-10-17,Female,"188 Carolyn Stream
+East Kyle AL 97333",25.2
+31,Parker Fernandez,1982-02-21,Other,"USNS Gonzales
+FPO AA 14173",42.8
+32,Nancy Lee,1995-03-26,Other,"178 James Fork Apt. 724
+Jacksonville MI 56031",48.7
+33,Aaron Hansen,2000-08-05,Other,"99164 Sims Overpass Suite 807
+South Andreaville AR 88514",46.9
+34,John Barker,1982-08-04,Male,"510 Powell Walk Apt. 231
+West Carly WV 39016",71.1
+35,Teresa Dunn,1999-03-10,Female,"47748 Yang Burgs
+Schneidertown MI 91607",92.6
+36,Caleb Taylor,1997-01-16,Male,"PSC 4100, Box 0864
+APO AP 92405",32.7
+37,Paul Snow,1990-09-11,Male,"98965 Sabrina Ports Suite 056
+Port Gabrielshire MP 80741",18.5
+38,Brianna Snyder,1981-06-06,Female,"37242 Brianna Points
+North Katherine GU 92036",50.0
+39,Jon Thompson,1983-05-09,Male,"837 Frances Light Apt. 920
+Dawnborough WY 54445",50.7
+40,Troy Martinez,1991-04-24,Male,"1618 Briggs Manors Apt. 634
+Maureentown MT 43584",40.3
