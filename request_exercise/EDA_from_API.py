@@ -23,7 +23,7 @@ def fetch_api_data(url,params=None, headers=None):
 
 # Example API endpoint and parameters
 api_url = "https://api.example.com/messy-data"
-params = {"date": "2023-01-01"}
+params = {"date": "2023-01-02"}
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
 raw_data = fetch_api_data(api_url, params=params, headers=headers)
