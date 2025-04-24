@@ -27,7 +27,36 @@ data = {
 }
 
 df = pd.DataFrame(data)
-print(df)
 
 df2 = pd.pivot_table(df, values = ["D","F"], index=["A","B"], columns =["C"])
-print(df2)
+
+
+### melt()
+
+cheese = pd.DataFrame({
+    "first": ["John","Mary"],
+    "last": ["Doe","Bo"],
+    "height": [5.5,6.0],
+    "weight": [130,150]
+})
+
+print(cheese)
+
+cheese1 = cheese.melt(id_vars=["height","weight"])
+
+cheese2 = cheese.melt(id_vars=["first","last"], var_name="quantity")
+
+
+# Explode() for nested, list-like values
+keys = ["panda1", "panda2", "panda3"]
+
+values = [["eats", "shoots"], ["shoots", "leaves"], ["eats", "leaves"]]
+
+df = pd.DataFrame({"keys": keys, "values":values})
+
+df1 = df.explode("values")
+print(df1)
+
+df1.columns = df1.columns.str.upper()
+print(df1)
+
