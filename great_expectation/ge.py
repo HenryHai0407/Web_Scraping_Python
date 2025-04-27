@@ -12,3 +12,4 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
+df.to_csv("user_signup.csv",index=False)
