@@ -13,10 +13,14 @@ batch_request = BatchRequest(
 
 # Try the connection to data
 try:
-    validator = context.get_validator(batch_request=batch_request)
+    validator = context.get_validator(batch_request=batch_request,expectation_suite_name="user_signup_suite")
 
     # Add simple expectation
     result = validator.expect_column_values_to_not_be_null('email')
+
+    # Save suite
+    validator.save_expectation_suite()
+    print("✅ Expectation saved successfully into 'user_signup_suite'!")
 
     # Check and print result
     if result.success:
