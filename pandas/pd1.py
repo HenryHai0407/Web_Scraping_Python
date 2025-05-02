@@ -96,12 +96,12 @@ df2.drop_duplicates(inplace = True)
 # Pandas correlation
 # What is a good correlation? at least 0.6 <<<< to call it a good correlation.
 
-print(df2.corr())
+# print(df2.corr())
 
 # Plot
 # Scatter
-df2.plot(kind = 'scatter', x = 'Pulse', y = 'Calories')
-plt.show()
+# df2.plot(kind = 'scatter', x = 'Pulse', y = 'Calories')
+# plt.show()
 
-df2['Pulse'].plot(kind = 'hist')
-plt.show()
+# df2['Pulse'].plot(kind = 'hist')
+# plt.show()
