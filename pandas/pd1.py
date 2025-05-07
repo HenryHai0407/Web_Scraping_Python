@@ -111,4 +111,15 @@ df2.drop_duplicates(inplace = True)
 
 ### Update the CEO of Dow Chemical to Jim Fitterling
 # f500.loc['Dow Chemical','ceo'] = 'Jim Fitterling'
+# Dow Chemical is row label
+# ceo is column label
+
+# Replace various variables
+# df.replace([1,3],['one','three'])
+
+# Rename columns
+# df.rename(columns={'old_name': 'new_name'})
+
+# Mass renaming of columns
+# df.rename(columns=lambda x: x + 1)
 
