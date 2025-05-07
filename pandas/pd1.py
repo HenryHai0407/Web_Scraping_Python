@@ -105,3 +105,10 @@ df2.drop_duplicates(inplace = True)
 
 # df2['Pulse'].plot(kind = 'hist')
 # plt.show()
+
+### Assigning data
+# top5_rank_revenue['year_founded'] = 0
+
+### Update the CEO of Dow Chemical to Jim Fitterling
+# f500.loc['Dow Chemical','ceo'] = 'Jim Fitterling'
+
