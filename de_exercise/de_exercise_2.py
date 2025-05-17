@@ -28,6 +28,10 @@
 #             less_than_max = a
 # print(f'The 2nd highest element in the list: {less_than_max} ')
 
+# 2/ Second solution:
+# int_list.sort(reverse=True)
+# int_list[1]
+
 # 3/
 # int_input = int(input("Enter a number: "))
 # def prime_number_check(int_input):
@@ -63,3 +67,10 @@
 #     for a in range(1,i+1):
 #         v.append(a)
 # print(dict_5)
+
+# 5/ Second solution
+# result = {}
+
+# for i in range(1,11):
+#     result[i] = list(range(1,i+1))
+# print(result)
