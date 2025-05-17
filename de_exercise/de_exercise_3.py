@@ -117,7 +117,52 @@ list2 = [20, 21, 1232, 21, 3256, 6325, 2150, 20, 1232]
 #     print(False)
 
 
+# --------- Lesson 3: Homework ---------------
+# 1/
+# Not understand
+
+# 2/
+# prices = [100, 102, 98, 105, 110, 111, 150, 145, 120]
+
+# def calculate_returns(prices):
+#     i = 0
+#     while i < len(prices)-1:
+#         return_per = (prices[i+1]-prices[i])*100/prices[i]
+#         print(f'The return price at {i+2}th day is {return_per:.2f}%')
+#         i = i + 1
+
+# calculate_returns(prices)
+# # 2/ Second solution
+# def calculate_returns2(prices):
+#     return list(
+#         map(
+#             lambda x,y: ((x-y)/y)*100,prices[1:],prices[:-1]
+#         ) # x: current price, y: previous price
+#     )
+
+# print(calculate_returns2(prices))
 
 
+# 3/
+# transactions = [
+#     ('buy', 100, 200.5), 
+#     ('sell', 50, 220.0), 
+#     ('buy', 150, 198.7), 
+#     ('sell', 100, 215.0)
+# ]
 
-    
+# net_position = {
+#     'total_buy': 0,
+#     'total_sell': 0,
+#     'total_buy_price': 0,
+#     'total_sell_price': 0
+# }
+
+# for tr in transactions:
+#     if tr[0] == 'buy':
+#         net_position['total_buy'] += tr[1]
+#         net_position['total_buy_price'] += tr[2]
+#     elif tr[0] == 'sell':
+#         net_position['total_sell'] += tr[1]
+#         net_position['total_sell_price'] += tr[2]
+# print(net_position)
