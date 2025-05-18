@@ -119,7 +119,48 @@ list2 = [20, 21, 1232, 21, 3256, 6325, 2150, 20, 1232]
 
 # --------- Lesson 3: Homework ---------------
 # 1/
-# Not understand
+# Bài này em sử dụng chatGPT để giải ạ
+# def is_valid(s: str) -> bool:
+#     stack = []  # Empty list to store opening brackets
+#     brackets = {')': '(', '}': '{', ']': '['}  # Maps closing brackets to opening brackets
+#     for char in s:
+#         if char in '({[':  # If it's an opening bracket
+#             stack.append(char)  # Push it onto the stack
+#         elif char in ')}]':  # If it's a closing bracket
+#             if not stack:  # Stack empty? No opening bracket to match, so invalid
+#                 return False
+#             if stack.pop() != brackets[char]:  # Pop top bracket; does it match?
+#                 return False
+#     return len(stack) == 0  # Valid if stack is empty (all brackets matched)
+
+
+# 1/ Second solution
+# def is_valid(s: str) -> bool:
+#     stack = []  # Our "pile" for opening brackets
+#     brackets = {')': '(', '}': '{', ']': '['}  # Which closing bracket matches which opening bracket
+#     print(f"Starting with string: {s}")
+#     for char in s:
+#         print(f"\nProcessing character: {char}")
+#         if char in '({[':
+#             stack.append(char)
+#             print(f"  - Found opening bracket {char}, stack is now: {stack}")
+#         elif char in ')}]':
+#             print(f"  - Found closing bracket {char}")
+#             if not stack:
+#                 print(f"  - Stack is empty, no matching opening bracket! Invalid.")
+#                 return False
+#             top = stack.pop()
+#             print(f"  - Popped {top} from stack")
+#             if top != brackets[char]:
+#                 print(f"  - Mismatch: {top} doesn't match {char}! Invalid.")
+#                 return False
+#             print(f"  - Match found, stack is now: {stack}")
+#     print(f"\nFinished processing. Stack: {stack}")
+#     if stack:
+#         print("  - Stack not empty, some brackets unclosed! Invalid.")
+#         return False
+#     print("  - Stack empty, all brackets matched! Valid.")
+#     return True
 
 # 2/
 # prices = [100, 102, 98, 105, 110, 111, 150, 145, 120]
@@ -150,19 +191,22 @@ list2 = [20, 21, 1232, 21, 3256, 6325, 2150, 20, 1232]
 #     ('buy', 150, 198.7), 
 #     ('sell', 100, 215.0)
 # ]
+# def calculate_net_position(transactions):
+#     net_position = {
+#         'total_buy': 0,
+#         'total_sell': 0,
+#         'total_buy_price': 0,
+#         'total_sell_price': 0
+#     }
 
-# net_position = {
-#     'total_buy': 0,
-#     'total_sell': 0,
-#     'total_buy_price': 0,
-#     'total_sell_price': 0
-# }
+#     for tr in transactions:
+#         if tr[0] == 'buy':
+#             net_position['total_buy'] += tr[1]
+#             net_position['total_buy_price'] += tr[2] * tr[1]
+#         elif tr[0] == 'sell':
+#             net_position['total_sell'] += tr[1]
+#             net_position['total_sell_price'] += tr[2] * tr[1]
+#     print(net_position)
+# calculate_net_position(transactions)
 
-# for tr in transactions:
-#     if tr[0] == 'buy':
-#         net_position['total_buy'] += tr[1]
-#         net_position['total_buy_price'] += tr[2]
-#     elif tr[0] == 'sell':
-#         net_position['total_sell'] += tr[1]
-#         net_position['total_sell_price'] += tr[2]
-# print(net_position)
+# is_valid('[(]')
