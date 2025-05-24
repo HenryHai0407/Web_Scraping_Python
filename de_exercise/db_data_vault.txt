@@ -1,0 +1,92 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+
+Table FACT_Transactions {
+  hash_key varchar
+  account_id integer
+  customer_id integer
+  transaction_date_id integer
+  transaction_date datetime
+  amount float
+  transaction_type varchar [unique, note: 'DEPOSIT, WITHDRAWAL, TRANSFER']
+  branch_id integer
+  created_at timestamp
+}
+
+
+Table DIM_Accounts {
+  hash_key varchar [unique, ref: > LINK_Accounts_Transactions.hash_key_account]
+  customer_id integer
+  account_type varchar [unique, note: 'SAVINGS, CHECKING, LOAN']
+  open_date datetime
+  created_at timestamp
+}
+
+
+
+
+Table LINK_Accounts_Transactions {
+  hash_key varchar
+  hash_key_account varchar
+  hash_key_transaction varchar [unique, ref: > FACT_Transactions.hash_key]
+  date_load timestamp
+}
+
+
+Table LINK_Customers_Accounts {
+  hash_key varchar
+  hash_key_customer varchar
+  hash_key_account varchar [unique, ref: > DIM_Accounts.hash_key]
+  date_load timestamp
+}
+
+
+Table LINK_Branches_Transactions {
+  hash_key varchar
+  hash_key_transaction varchar
+  hash_key_branch varchar [unique, ref: > FACT_Transactions.hash_key]
+  date_load timestamp
+}
+
+
+Table LINK_Date_Transactions {
+  hash_key varchar
+  hash_key_transaction varchar [unique, ref: > FACT_Transactions.hash_key]
+  hash_key_date varchar
+  date_load timestamp
+}
+
+
+Table DIM_Customers {
+  hash_key varchar [unique, ref: > LINK_Customers_Accounts.hash_key_customer]
+  full_name varchar
+  gender varchar
+  birthdate datetime
+  address varchar
+  city varchar
+  region varchar
+  created_at timestamp
+}
+
+
+Table DIM_Branches {
+  hash_key varchar [unique, ref: > LINK_Branches_Transactions.hash_key_branch]
+  brand_name varchar
+  city varchar
+  region varchar
+  created_at timestamp
+}
+
+
+Table DIM_Date {
+  hash_key varchar [unique, ref: > LINK_Date_Transactions.hash_key_date]
+  full_date datetime
+  day integer
+  month integer
+  quarter integer
+  year integer
+  created_at timestamp
+}
+
+
