@@ -1,0 +1,5 @@
+# Find student counts > 5 in the class types
+output1 = courses['class'].value_counts()
+output1 = [k for k,v in output1.items() if  v >= 5]
+output1 = pd.DataFrame(out, columns=['class'])
+print(output1)
