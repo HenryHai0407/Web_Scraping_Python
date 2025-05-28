@@ -1,5 +1,28 @@
 # Find student counts > 5 in the class types
 output1 = courses['class'].value_counts()
 output1 = [k for k,v in output1.items() if  v >= 5]
-output1 = pd.DataFrame(out, columns=['class'])
+output1 = pd.DataFrame(output1, columns=['class'])
 print(output1)
+
+
+# Find the customer with the largest number of orders
+large_orders = orders['customer_number'].mode() # Most frequency customer_number existing in the dataset
+
+
+
+# Calculate group-sold products by the date 
+ # Using .agg() function Pandas Python
+
+activities1 = activities.groupby('sell_date').agg(
+    num_sold = ('product', lambda x: x.nunique()),
+    products = ('product', lambda x: ','.join(sorted(x.unique())))
+).reset_index()
+print(activities1)
+
+ # Second solution
+ grouped = activities.groupby('sell_date')['product'].apply(lambda x: sorted(set(x))).reset_index()
+ grouped['num_sold'] = grouped['product'].apply(len)
+ grouped['products'] = grouped['product'].apply(lambda x: ','.join(x))
+ result = grouped[['sell_date','num_sold','products']]
+ result = result.sort_values('sell_date')
+ print(result)
