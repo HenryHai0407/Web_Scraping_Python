@@ -1,0 +1,23 @@
+### T-SQL ###
+
+CAST: convert a value to specific data types
+CAST(ProductID as varchar(4))
+TRY_CAST: same with CAST but ignoring others which couldn't convert to NULLs.
+
+CONVERT: same CAST
+CONVERT(varchar(4),ProductID)
+
+PARSE: convert formatted strings that represent numeric or date/time values.
+PARSE('01/01/2021' as date)
+PARSE('$200' as money) as moneyvalue;
+
+STR: to strings
+
+ISNULL: 
+ISNULL(FullName,'No Information')
+
+COALESCE: If all arguments are NULL, COALESCE returns NULL. All the expressions must return the same or compatible data types.
+COALESCE(HourlyRate * 40,
+        WeeklySalary,
+        Commission) as WeeklyRatings 
+        # This coalesce only returns NULL if 3 columns mentioned above are NULL values
