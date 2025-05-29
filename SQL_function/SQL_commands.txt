@@ -20,4 +20,99 @@ COALESCE: If all arguments are NULL, COALESCE returns NULL. All the expressions 
 COALESCE(HourlyRate * 40,
         WeeklySalary,
         Commission) as WeeklyRatings 
-        # This coalesce only returns NULL if 3 columns mentioned above are NULL values
+        # This coalesce only returns NULL if 3 columns mentioned above are NULL val
+        
+
+NULLIF: replace a NULL value with 0 as we assign below
+NULLIF(UnitPriceDiscount, 0)
+
+--------------------------------------------------------------------
+Sort and filter results in T-SQL
+
+Using the TOP clause:
+SELECT TOP 10 Name, ListPrice
+FROM Product
+ORDER BY ListPrice desc;
+
+TOP WITH TIES: more rows qualify for inclusion in the top 10 most expensive products
+TOP PERCENT
+
+SELECT
+FROM
+ORDER BY
+OFFSET 10 ROWS -- Skip 10 rows
+FETCH NEXT 10 ROWS ONLY; -- Get the next 10
+
+----
+IN
+SELECT ProductCategoryID AS Category, ProductName
+FROM Production.Product
+WHERE ProductCategoryID IN (2, 3, 4);
+
+----
+BETWEEN
+SELECT ProductName, ListPrice, ModifiedDate
+FROM Production.Product
+WHERE ModifiedDate BETWEEN '2012-01-01 00:00:00.000' AND '2012-12-31 23:59:59.999';
+
+----
+LIKE
+SELECT
+FROM
+WHERE Name LIKE "%mountain%"
+
+SELECT
+FROM
+WHERE ProductName LIKE 'Mountain Bike Socks, _' -- Use the _(underscore) wildcard to represent a single character
+
+----------------
+Example:
+product_id,product_name,list_price
+123,Widget,12.99
+124,Gadget,3.99
+
+SQL command:
+SELECT TOP 100 *
+FROM OPENROWSET(
+        BULK 'https://mydatalake.blob.core.windows.net/data/files/*.csv',
+        FORMAT = 'csv',
+        PARSER_VERSION = '2.0',
+        HEADER_ROW = TRUE) as rows
+
+-----------------
+Example 2 (No header):
+123,Widget,12.99
+124,Gadget,3.99 
+
+SQL command:
+SELECT TOP 100 *
+FROM OPENROWSET(
+        BULK 'https://mydatalake.blob.core.windows.net/data/files/*.csv',
+        FORMAT = 'csv',
+        PARSER_VERSION = '2.0')
+WITH (
+        product_id INT,
+        product_name VARCHAR(20), COLLATE Latin1_General_100_BIN2_UTF8,
+        list_price DECIMAL (5,2)
+) as rows
+
+--------------------
+Querying JSON files
+{
+    "product_id": 123,
+    "product_name": "Widget",
+    "list_price": 12.99
+}
+
+
+SELECT JSON_VALUE(doc, '$.product_name') AS product,
+           JSON_VALUE(doc, '$.list_price') AS price
+FROM
+    OPENROWSET(
+        BULK 'https://mydatalake.blob.core.windows.net/data/files/*.json',
+        FORMAT = 'csv',
+        FIELDTERMINATOR ='0x0b',
+        FIELDQUOTE = '0x0b',
+        ROWTERMINATOR = '0x0b'
+    ) WITH (doc NVARCHAR(MAX)) as rows
+

@@ -1,0 +1,99 @@
+                            ### Linux ###
+Check Linux version:
+lsb_release -a
+
+e.g:
+hoanghai@DESKTOP-FTH1JIM:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 24.04.2 LTS
+Release:        24.04
+Codename:       noble
+
+#######################
+Linux commands:
+ls
+ls -l : list all detail information about each file
+
+ls -a: list all detail infomation about each file (INCLUDING hidden files)
+
+cat file_folder_name: show the content of the file
+
+touch file_folder_name: create a file
+
+vim filename: to write content to a file
+
+rm filename: to remove the file
+
+pwd: show the current directory
+
+########################
+Moving pwd:
+
+cd ~: Moving back to home folder (home of each employee, employees have different own home folder)
+
+cd ../../: back via 2 folder's directory
+
+#########################
+Moving file:
+
+mv dir1 dir2: Move file from dir1 to dir2 folder
+
+#########################
+Deleting folders:
+
+rm filename: remove a specific file
+rm -r filename_folder: remove ALL files within this folder (This folder is also deleted)
+
+#########################
+File Permission:
+
+-rwxr-xr--
+first c: file type
+3 next c: Owner Permission
+3 next c: Group Permission
+3 next c: Other Permission
+
+-rw-r--r--
+ 110100100: Using binary method
+
+##########################
+Pipes and Filters in Linux
+ls -l | grep .txt: To looking for files in the folder with condition (grep .txt means the filename contains ".txt")
+
+##########################
+Process in Linux
+ps -ef | grep airflow
+
+pid: Process ID 
+
+kill pid: to stop specific process ID
+
+##########################
+Vi Editor: adjust the content of the file
+
+:wq : to WRITE the content and QUIT (save the changes)
+:q! : to SKIP the changes and QUIT
+
+
+
+Flow:
+vim data_engineer.txt --> press "I" as Insert --> After inserting, press "Esc" --> :wq (means write then quit) --> Enter
+
+###########################
+We can also use "nano data_engineer.txt" to adjust the content of the file
+
+
+
+###########################
+Installation
+sudo install _____:
+
+###########################
+Finding files
+find /home/ -name "*.txt"
+
+###########################
+Check current status in general in Linux
+sudo install htop
+htop
