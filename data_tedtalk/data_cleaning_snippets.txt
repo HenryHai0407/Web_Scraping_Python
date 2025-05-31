@@ -26,3 +26,9 @@ print(activities1)
  result = grouped[['sell_date','num_sold','products']]
  result = result.sort_values('sell_date')
  print(result)
+
+
+# Daily Lead and Partners (count the number of distinct lead_id)
+    a1 = daily_sales.groupby(['date_id','make_name'])[['lead_id','partner_id']].nunique().reset_index()
+    a1 = a1.rename(columns={'lead_id':'lead_counts'}) ## Change the column make_name
+    print(a1)
