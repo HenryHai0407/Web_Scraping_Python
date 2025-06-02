@@ -32,3 +32,6 @@ print(activities1)
     a1 = daily_sales.groupby(['date_id','make_name'])[['lead_id','partner_id']].nunique().reset_index()
     a1 = a1.rename(columns={'lead_id':'lead_counts'}) ## Change the column make_name
     print(a1)
+    return a1
+
+
