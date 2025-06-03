@@ -35,3 +35,6 @@ print(activities1)
     return a1
 
 
+# Count number of times that row occurs
+    df = actor_director.groupby(['actor_id','director_id']).size().reset_index(name='count')
+    return df[df['count'] >= 3][['actor_id','director_id']]
