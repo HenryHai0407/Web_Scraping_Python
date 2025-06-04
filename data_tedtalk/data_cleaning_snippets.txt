@@ -42,3 +42,9 @@ print(activities1)
 # Replace Employee ID with the unique identifier
  df1 = pd.merge(employees, employees_uni, on='id', how='left')
  df1[['unique_id','name']]
+
+# cross join
+df = students.merge(subjects, how='cross')
+
+# Step 2: Group examinations by student_id and subject_name to count attended exams
+exam_counts = examinations.groupby(['student_id', 'subject_name']).size().reset_index(name='attended_exams')
