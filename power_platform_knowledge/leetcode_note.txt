@@ -1,0 +1,12 @@
+### Leetcode ###
+
+1/ Pandas
+# Solution with JOIN (SQL) and isin
+sales_person[~sales_person['sales_id'].isin(
+        pd.merge(
+            left=orders,
+            right=company[company['name']=='RED'],
+            on='com_id',
+            how='inner'
+        )['sales_id'].unique()
+)][['name']]
