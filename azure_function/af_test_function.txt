@@ -1,0 +1,38 @@
+import logging
+import azure.functions as func
+import requests
+import json
+from azure.storage.blob import BlobServiceClient
+
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Fetching paginated users from reqres.in')
+
+    try:
+        # Step 1: Fetch paginated API
+        base_url = "https://reqres.in/api/users"
+        page = 1
+        all_users = []
+
+        while True:
+            res = requests.get(base_url, params={"page": page})
+            if res.status_code != 200:
+                return func.HttpResponse(f"Error fetching page {page}", status_code=500)
+            data = res.json()
+            all_users.extend(data["data"])
+            if page >= data["total_pages"]:
+                break
+            page += 1
+
+        # Step 2: Upload to Blob Storage
+        connect_str = "YOUR_CONNECTION_STRING"
+        container = "testdata"
+        blob_name = "all_users.json"
+
+        blob_service = BlobServiceClient.from_connection_string(connect_str)
+        blob_client = blob_service.get_blob_client(container=container, blob=blob_name)
+        blob_client.upload_blob(json.dumps(all_users), overwrite=True)
+
+        return func.HttpResponse(f"Uploaded {len(all_users)} users to blob!", status_code=200)
+
+    except Exception as e:
+        return func.HttpResponse(f"Error: {str(e)}", status_code=500)
