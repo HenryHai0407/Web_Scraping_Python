@@ -1,0 +1,6 @@
+######## Azure Functions #########
+
+- AF: Create Project
+
+- AF: Deploy to Azure (after saving the file, remember to deploy to Azure again)
+
