@@ -4,3 +4,5 @@
 
 - AF: Deploy to Azure (after saving the file, remember to deploy to Azure again)
 
+------------------------
+Using Azure CLI
