@@ -6,3 +6,26 @@
 
 ------------------------
 Using Azure CLI
+
+- Create Subscription
+
+- Create RG
+az group create --name $RG --location $LOC
+
+az storage account create \
+--name $STORAGE \
+--location $LOC \
+--resource-group $RG \
+--sku Standard_LRS
+
+az functionapp create \
+--resource-group $RG \
+--consumption-plan-location $LOC \
+--runtime python \
+--runtime-version 3.10 \
+--functions-version 4 \
+--os-type Linux \
+--name $APPNAME \
+--storage-account $STORAGE
+
+HUOM!: Consumption plan is always Python v2 programming mode (no more __init__.py required)
