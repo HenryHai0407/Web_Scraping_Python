@@ -29,3 +29,12 @@ az functionapp create \
 --storage-account $STORAGE
 
 HUOM!: Consumption plan is always Python v2 programming mode (no more __init__.py required)
+
+--------------------------
+Improvements:
+ - Need audit trail / historical snapshots (feedbackly-data/YYYY-MM-DD/responses.json)
+ - Need temp directory first then rename/move after success
+ - Implement incremental logic (e.g: save last skip in a checkpoint file and append only new pages) -> Only when dataset gets huge (million of rows)
+ - Timer trigger
+ - Fine-grained security: Use SAS token or managed-identity + Data Lake Gen2 connector (WHEN IT COMES TO FABRIC ecosystem)
+ 
