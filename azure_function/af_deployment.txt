@@ -38,3 +38,6 @@ Improvements:
  - Timer trigger
  - Fine-grained security: Use SAS token or managed-identity + Data Lake Gen2 connector (WHEN IT COMES TO FABRIC ecosystem)
  
+--------------------------
+Issue:
+- Azure Function Timer Trigger cannot be found in the Azure despite successful deployment
