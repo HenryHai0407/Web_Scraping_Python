@@ -50,3 +50,8 @@ Issue:
 - Sufficient packages in site-packages (requirements.txt)
 - Keep host.json as default
 - Always check Live Metric logs to follow its errors
+
+--------------------------
+Improvements v2:
+- Make a comprehensive Virtual Network for Timer Trigger Azure Function
+- Do we need a Azure Cloud Shell with Network Profile + Relay Namespace???
