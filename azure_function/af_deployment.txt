@@ -41,3 +41,12 @@ Improvements:
 --------------------------
 Issue:
 - Azure Function Timer Trigger cannot be found in the Azure despite successful deployment
+
+---> Solution:
+- Deploy Timer Trigger Python v2 programming model via VS Code locally first, and then deploy to Azure later.
+- Use: func azure functionapp publish $APPNAME --build remote
+- Add all necessary application variables setting, also API variables for example (FEEDBACKLY_API_KEY)
+- Deploy in .venv/ (virtual environment) + Install Azure CLI Tools in VSCode in order to access to Azure subscription.
+- Sufficient packages in site-packages (requirements.txt)
+- Keep host.json as default
+- Always check Live Metric logs to follow its errors
