@@ -1,0 +1,35 @@
+1. Refine the Excel source
+
+Make sure the sheet is an official Excel Table with headers exactly “henkilön nimi” and “henkilön sähköposti”.
+
+Store the file in SharePoint or OneDrive so Power Automate’s Excel connector can read it.
+
+2. Build the skeleton flow in Power Automate
+
+Trigger: start with a manual button (easy for testing).
+
+List rows present in a table (Excel Online Business).
+
+Apply to each row. Inside the loop add:
+
+Place-holder “Check user” action (dummy Compose that we will swap for the real Tampuuri GET once we know the endpoint).
+
+Condition → if “user does not exist” → call a dummy “Create user” action; else log “Exists”.
+
+Update a row (optional) to record status.
+
+3. Set up secure variables
+
+Create environment variables (or Key Vault secrets) now—even if they’re empty—so we can drop in the real API key / tenant ID later without touching every action.
+
+4. Prepare a quick test plan
+
+Two fake rows in Excel → run the flow → expect “Exists” for both until the real API is wired.
+
+When credentials arrive, flip the dummy steps to real HTTP actions and re-test.
+
+5. Gather the missing information (the five bullets above).
+
+Send your revised Finnish question (duplicate-focused) plus the extra clarifying questions.
+
+Once you have the endpoint, auth details, and required fields, the dummy steps can be converted in 10–15 minutes.
