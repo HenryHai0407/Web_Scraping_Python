@@ -97,3 +97,17 @@ find /home/ -name "*.txt"
 Check current status in general in Linux
 sudo install htop
 htop
+
+
+-------------
+15/06/2025
+ls --help
+
+- Create variable
+hainem="Hoanghai"
+
+- Call variable
+echo $hainem
+
+- Delete variable
+unset hainem
