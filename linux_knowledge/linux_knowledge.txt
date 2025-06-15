@@ -98,7 +98,6 @@ Check current status in general in Linux
 sudo install htop
 htop
 
-
 -------------
 15/06/2025
 ls --help
