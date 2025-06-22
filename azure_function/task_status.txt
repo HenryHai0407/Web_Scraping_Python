@@ -1,8 +1,10 @@
-21-06-2025
+21/06/2025
 - Going to through some PBI reports
 - Developing 'Issue Tracking' in M365 with Power BI permission
 - Python ML with sentiment analysis (in customer experience survey)
 - Add some new features for our survey platform
     + Generate different Survey types (kids, elderly, ....)
     + Survey from different touchpoint (the source of incoming responses)
-    
+
+22/06/2025
+- Learned how to make an Azure map (not ready yet)
