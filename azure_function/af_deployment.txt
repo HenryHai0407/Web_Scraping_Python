@@ -54,4 +54,4 @@ Issue:
 --------------------------
 Improvements v2:
 - Make a comprehensive Virtual Network for Timer Trigger Azure Function
-- Do we need a Azure Cloud Shell with Network Profile + Relay Namespace???
+- Do we need a Azure Cloud Shell with Network Profile + Relay Namespace??? 
