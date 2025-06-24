@@ -16,3 +16,5 @@
 - Couldn't use ODBC connector as the way to filter data and make data load faster (Because ODBC connector only works with Import mode, not DirectQuery)
 
 25/06/2025
+
+26/06/2025
