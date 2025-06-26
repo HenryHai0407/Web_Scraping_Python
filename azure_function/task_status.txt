@@ -17,4 +17,6 @@
 
 25/06/2025
 - Create a Power Automate workflow with nested loop and "if then" condition
+
 26/06/2025
+- Completed a Power Automate workflow
