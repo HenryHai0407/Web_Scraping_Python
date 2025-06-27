@@ -20,3 +20,6 @@
 
 26/06/2025
 - Completed a Power Automate workflow
+
+27/06/2025
+- Started a quizz project for meeting
