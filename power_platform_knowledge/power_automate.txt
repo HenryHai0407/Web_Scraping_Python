@@ -33,3 +33,5 @@ When credentials arrive, flip the dummy steps to real HTTP actions and re-test.
 Send your revised Finnish question (duplicate-focused) plus the extra clarifying questions.
 
 Once you have the endpoint, auth details, and required fields, the dummy steps can be converted in 10–15 minutes.
+
+6. Create a Template for reusability
