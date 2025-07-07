@@ -35,3 +35,6 @@ MCP
 
 6/7/2025
 - Redesign Budget file v2
+
+7/7/2025
+- Excel update: 80% done + Power BI: 50%
