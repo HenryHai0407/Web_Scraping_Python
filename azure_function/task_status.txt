@@ -42,5 +42,9 @@ MCP
 9/7/2025
 - Excel update: 98% done + Power BI: 95%
 - Continue with survey website development
+
 10/7/2025
 - Do exercise
+
+11/7/2025
+- Learn DP-700 DE
