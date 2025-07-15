@@ -57,3 +57,6 @@ MCP
 
 14/7/2025
 - Add optional features for DMC report
+
+15/7/2025
+- Learn DP-700
