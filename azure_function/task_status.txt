@@ -60,3 +60,6 @@ MCP
 
 15/7/2025
 - Learn DP-700
+
+15/7/2025
+- Data Exploration DMC report
