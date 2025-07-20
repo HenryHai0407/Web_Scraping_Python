@@ -76,3 +76,6 @@ MCP
 19/7/2025
 - Exploring new things
 
+20/07/2025
+- Rest
+
