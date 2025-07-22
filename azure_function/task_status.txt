@@ -81,3 +81,6 @@ MCP
 
 21/7/2025
 - PowerBI + DP 700
+
+22/7/2025
+- Add incremental refresh for our table in PowerBI
