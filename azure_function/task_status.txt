@@ -84,3 +84,6 @@ MCP
 
 22/7/2025
 - Add incremental refresh for our table in PowerBI
+
+23/7/2025
+- Stuck in improving data loading performance
