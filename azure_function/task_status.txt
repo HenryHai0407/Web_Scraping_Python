@@ -95,4 +95,7 @@ MCP
 - PowerBI + DP-700
 
 26/7/2025
-- DP 700
+- DP-700
+
+28/7/2025
+- DP-700 practical assessment 64/100
