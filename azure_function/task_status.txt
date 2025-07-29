@@ -99,3 +99,6 @@ MCP
 
 28/7/2025
 - DP-700 practical assessment 64/100
+
+29/7/2025
+- DP-700 practical assessment 80/100
