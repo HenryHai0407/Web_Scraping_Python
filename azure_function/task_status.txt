@@ -127,5 +127,8 @@ MCP
 06/8/2025
 - PowerBI:n parantaminen
 
+07/8/2025
+- PowerBI:n parantaminen
+
 
 
