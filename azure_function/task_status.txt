@@ -151,4 +151,7 @@ MCP
 14/8/2025
 - PowerBI:n raportien parantaminen
 
+15/08/2025
+- DMC selvitäminen
+
 
