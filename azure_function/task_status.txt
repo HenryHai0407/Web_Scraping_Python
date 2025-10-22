@@ -354,3 +354,6 @@ MCP
 
 21/10/2025
 - PowerBI:n raportien parantaminen
+
+22/10/2025
+- PowerBI:n raportien parantaminen
