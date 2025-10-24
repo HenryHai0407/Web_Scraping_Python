@@ -360,3 +360,6 @@ MCP
 
 23/10/2025
 - PowerBI:n raportien parantaminen
+
+24/10/2025
+- PowerBI:n raportien parantaminen
