@@ -100,4 +100,6 @@
 
 8/3/2026: Developing PowerBI report
 
+9/3/2026: Developing PowerBI report + Familiarizing with Claude Code
+
 9/3/2026: Developing PowerBI report
