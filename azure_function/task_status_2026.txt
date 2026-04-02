@@ -116,4 +116,6 @@
 
 15/3/2026: Developing PowerBI report + Personal vibe coding project (JavaScript, DOM basics)
 
-15/3/2026: Developing PowerBI report + Personal vibe coding project
+16/3/2026: Developing PowerBI report + Personal vibe coding project
+
+17/3/2026: Developing PowerBI report + Personal vibe coding project
