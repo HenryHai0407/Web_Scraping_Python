@@ -142,3 +142,4 @@
 
 27/3/2026: Developing PowerBI report + Personal vibe coding project
 
+28/3/2026: Reading Fundamental of Data Engineering (83/445)
