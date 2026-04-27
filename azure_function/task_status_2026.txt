@@ -145,3 +145,5 @@
 28/3/2026: Reading Fundamental of Data Engineering (83/445)
 
 29/3/2026: Developing PowerBI report + Personal vibe coding project
+
+30/3/2026: Developing PowerBI report + Personal vibe coding project
