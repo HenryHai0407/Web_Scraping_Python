@@ -231,3 +231,5 @@
 10/5/2026: Developing PowerBI report
 
 11/5/2026: Developing PowerBI report
+
+12/5/2026: Learning 5 main layers in software application's development
