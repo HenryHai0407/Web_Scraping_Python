@@ -1,4 +1,4 @@
-1/1/2026: Developing InfoSec data pipeline
+w1/1/2026: Developing InfoSec data pipeline
 
 2/1/2026: Developing InfoSec data pipeline
 
@@ -349,3 +349,5 @@
 09/7/2026: Developing PowerBI report
 
 10/7/2026: Developing PowerBI report
+
+11/7/2026: Developing PowerBI report
